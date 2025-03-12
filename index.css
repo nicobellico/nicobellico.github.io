@@ -1,65 +1,192 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: black;
-}
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  color: white;
-}
-.section {
-  margin-bottom: 40px;
-}
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.project-card {
-    position: relative;
-    margin: 10px;
-    padding: 15px;
-    width: 250px;
-    height: 200px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+header {
+    width: 100%;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 0 10px;
 }
 
-.anchor {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 16px;
-    color: rgb(115, 235, 121);
-    text-decoration: none;
-    border-radius: 5px;
+.logo {
+    height: 50px;
+    margin-left: 10px;
 }
 
-.anchor:hover {
-    background-color: gray;
-  }
+nav {
+    margin-right: 20px;
+}
 
-footer {
-    bottom: 0;
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: seashell;
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 69px;
+}
+
+#mission {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 700px;
+    padding: 40px 0;
+    background-image: url('resources/img-mission-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    background-color: black;
     width: 100%;
     padding: 10px;
+}
+
+#mission h2,
+#mission h4 {
+    margin: 10px 0;
+}
+
+#featured {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.tea-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.tea-item {
+    margin-bottom: 20px;
+}
+
+.tea-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tea-item h3 {
+    margin-top: 10px;
+}
+
+#locations {
+    min-height: 500px;
+    padding: 40px 0;
+    background-image: url('resources/img-locations-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#locations h2 {
+    margin-bottom: 15px;
+}
+
+.locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.location {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid seashell;
+}
+
+#contact {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#copyright {
+    text-align: left;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    #featured {
+        width: 90%;
+    }
+    .tea-collection {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .tea-collection {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .tea-item img {
+        width: 90%;
+        height: auto;
+    }
+    
+    main {
+        padding-top: 120px;
+    }
 }
