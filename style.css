@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, p {
+  text-shadow: 0 0 10px #00fff7;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Video de fondo */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Texto encima del video */
+.overlay-text {
+  z-index: 1;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+.overlay-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00fff7;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  color: #ff00c8;
+}
+
+/* Sección del título */
+.title-section {
+  background: linear-gradient(135deg, #0f0f2d, #1c0033);
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-section h1 {
+  font-size: 3rem;
+  color: #ff00c8;
+  text-shadow: 0 0 15px #00fff7;
+}
+
+/* Galería de imágenes */
+.gallery {
+  background-color: #14001f;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  z-index: 1;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff00c8;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Contacto */
+.contact-section {
+  background: linear-gradient(135deg, #0f0f2d, #1c0033);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #00fff7;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .overlay-text h2 {
+    font-size: 2rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  .title-section h1 {
+    font-size: 2.2rem;
+  }
+}
